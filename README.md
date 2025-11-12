@@ -18,8 +18,14 @@ A plataforma permite que artesãos cadastrem seus produtos com fotos, descriçõ
 - **Econômico:** Apoia pequenos negócios e produção local.
 - **Cultural:** Valoriza o artesanato regional e fortalece a identidade cultural.
 
+ ## 🔗 Acesse o Projeto Online
+
+Você pode visualizar e testar a plataforma acessando:  
+👉 [https://maonamassaa.netlify.app/](https://maonamassaa.netlify.app/)
+
 ## 📦 Como Executar
 
 1. Clone o repositório:
    ```bash
    git clone https://github.com/EythordoNascimento/m-o_na_massa.git
+
