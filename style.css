@@ -5,8 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Spartan',sans-serif;
+   
 }
 
+ 
 h1 {
     font-size: 50px;
     line-height: 64px;
@@ -47,6 +49,9 @@ p {
     margin: 40px 0;
 }
 
+
+  
+
 button.normal {
     font-size: 14px;
     font-weight: 600;
@@ -83,13 +88,35 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 50px 80px;
-    background: #E3E6F3;
+    background: #e3e6f3c7;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     z-index: 999;
     position: sticky;
     top: 0;
 }
 
+
+nav {
+    height: 70px;              
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative; /* permite posicionar a logo */
+
+  }
+  
+  .logo {
+    width: 350px;        /* aumenta a largura */
+    height: auto;        /* mantém proporção */
+    position: absolute;  /* sai do fluxo da nav */
+    top: 50%;            /* centraliza verticalmente */
+    transform: translateY(-50%);
+  
+  }
+  
+
+  
 #navbar {
     display: flex;
     align-items: center;
@@ -112,7 +139,7 @@ body {
 
 #navbar li a:hover,
 #navbar li a.active {
-    color: #088178;
+    color: #422606;
 }
 
 #navbar li a:hover::after,
@@ -120,7 +147,7 @@ body {
     content: "";
     width: 30%;
     height: 2px;
-    background: #088178;
+    background: #552c06;
     position: absolute;
     bottom: -4px;
     left: 20px;
@@ -448,6 +475,12 @@ footer a:hover {
 footer .copyright {
     width: 100%;
     text-align: center;
+}
+footer .logo-footer {
+    width: 180px;       /* controla a largura da logo no footer */
+    height: auto;       /* mantém proporção */
+    margin-bottom: 30px;
+    display: block;     /* garante alinhamento */
 }
 
 /* Shop Page */
@@ -889,8 +922,17 @@ footer .copyright {
     .section-p1 {
         padding: 40px 40px;
     } 
+    
+    .logo{
+        width: 189px;       /* controla a largura da logo */
+        height: auto;       /* mantém proporção */
+        margin-bottom: 40px; /* espaço abaixo da logo */
+        margin-left: 13px
+    }
 
+   
     #navbar {
+        padding: 120px 0 0 10px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -904,6 +946,7 @@ footer .copyright {
         box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
         padding: 80px 0 0 10px;
         transition: 0.3s;
+        
     }
 
     #navbar.active {
