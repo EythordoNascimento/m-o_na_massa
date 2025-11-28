@@ -1399,6 +1399,22 @@ footer .col h4 {
     transition: 0.3s ease;
 }
 
+.copyright a {
+    color: #088178; /* ou outra cor que combine com o site */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode */
+.dark-theme .copyright a {
+    color: var(--hero-text);
+}
+
+
 .dark-theme footer .col a,
 .dark-theme footer .col h4,
 .dark-theme footer p {
