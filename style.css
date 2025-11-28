@@ -8,6 +8,9 @@
    
 }
 
+
+
+
  
 h1 {
     font-size: 50px;
@@ -915,10 +918,34 @@ footer .logo-footer {
     padding: 10px;
     font-size: 13px;
 }
+/* Esconde o X em TODAS as telas como padrão */
+#close {
+    display: none !important;
+}
+
 
 /* Media Query */
 
 @media (max-width: 799px) {
+
+    .dark-theme #mobile i,
+.dark-theme #mobile a i {
+    color: #fff !important; 
+    opacity: 1 !important;
+}
+
+#close {
+    display: block !important;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 24px;
+}
+
+.dark-theme #close {
+    color: var(--hero-text) !important;
+}
+
     .section-p1 {
         padding: 40px 40px;
     } 
@@ -951,6 +978,15 @@ footer .logo-footer {
 
     #navbar.active {
         right: 0px;
+        background: #1a1a1a; /* fundo dark */
+    }
+
+    #navbar.active li a {
+        color: #fff !important; /* texto branco */
+    }
+
+    #navbar.active #close {
+        color: #fff !important; /* X branco */
     }
 
     #navbar li {
@@ -968,14 +1004,7 @@ footer .logo-footer {
         padding-left: 20px;
     }
 
-    #close {
-        display: initial;
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        color: #222;
-        font-size: 24px;
-    }
+ 
 
     #lg-bag {
         display: none;
@@ -1195,3 +1224,232 @@ footer .logo-footer {
         padding: 20px;
     }
 }
+
+/* 🔥 Tema Claro e Escuro com Variáveis */
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --highlight: #422606;
+
+    /* header */
+    --header-bg: #e3e6f3c7;
+
+    /* hero */
+    --hero-title: #088178;
+    --hero-text: #ffffff;
+
+    /* cards */
+    --card-border: #cce7d0;
+    --card-bg: #ffffff;
+}
+
+/* 🌙 Tema Escuro */
+.dark-theme {
+    --bg: #121212;
+    --text: #e6e6e6;
+    --highlight: #ffd38a;
+
+    --header-bg: #222222;
+
+    --hero-title: #4cd3c2;
+    --hero-text: #e6e6e6;
+
+    --card-border: #333333;
+    --card-bg: #1e1e1e;
+}
+
+/* Aplicação das variáveis */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#header {
+    background: var(--header-bg);
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    color: var(--text);
+    transition: 0.3s ease;
+}
+
+#hero h1,
+#hero button {
+    color: var(--hero-title);
+}
+
+#hero p,
+#hero h2,
+#hero h4 {
+    color: var(--hero-text);
+}
+
+#feature .fe-box,
+#product1 .pro {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+/* Ícone do botão */
+#theme-toggle i {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Mudar lua para sol no tema escuro */
+.dark-theme #theme-toggle i:before {
+    content: "\f185"; /* FontAwesome sol */
+}
+#navbar {
+    z-index: 10000 !important;
+}
+#close {
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000; /* coloque a cor que fará contraste */
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 2000; /* garante que fique por cima */
+    display: block;
+}
+#close:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+
+/* ================= DARK THEME FIXES ================= */
+
+/* =======================
+   DARK MODE - MENU MOBILE
+   ======================= */
+   .dark-mode #navbar {
+    background-color: #111 !important; /* Fundo bem escuro */
+    border-left: 1px solid #333;
+}
+
+.dark-mode #navbar a {
+    color: #f5f5f5 !important; /* Texto branco */
+}
+
+.dark-mode #navbar li {
+    border-color: #333 !important;
+}
+
+/* Ícone do menu e de fechar no modo escuro */
+.dark-mode #mobile i,
+.dark-mode #close {
+    color: #fff !important;
+}
+
+
+
+/* Menu */
+.dark-theme #navbar li a {
+    color: var(--hero-text) !important;
+}
+
+.dark-theme #navbar li a:hover,
+.dark-theme #navbar li a.active {
+    color: var(--highlight) !important;
+}
+
+.dark-theme #navbar li a:hover::after,
+.dark-theme #navbar li a.active::after {
+    background: var(--highlight);
+}
+
+/* Ícone do carrinho no header */
+.dark-theme #lg-bag a i {
+    color: var(--hero-text);
+}
+
+/* Produtos */
+.dark-theme #product1 .pro .des span,
+.dark-theme #product1 .pro .des h5,
+.dark-theme #product1 .pro .des h4 {
+    color: var(--hero-text) !important;
+}
+
+.dark-theme #product1 .pro i.fas.fa-star {
+    color: #ffd966; /* cor dourada clara visível */
+}
+
+.dark-theme #product1 .pro .cart {
+    background-color: #333 !important;
+    border-color: #555 !important;
+    color: var(--highlight) !important;
+}
+
+/* Section Titles e Headings */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4 {
+    color: var(--hero-text) !important;
+}
+
+/* Footer (links e textos brancos) */
+footer,
+footer .col a,
+footer .col h4 {
+    transition: 0.3s ease;
+}
+
+.dark-theme footer .col a,
+.dark-theme footer .col h4,
+.dark-theme footer p {
+    color: #ffffff !important;
+}
+
+/* Hover no footer */
+.dark-theme footer .col a:hover {
+    color: var(--highlight) !important;
+}
+
+/* Ajuste Fe-box títulos */
+.dark-theme #feature .fe-box h6 {
+    color: #000 !important; /* para contrastar com fundos coloridos */
+}
+
+/* ================= SHOP PAGE DARK THEME ================= */
+.dark-mode #page-header {
+    background-color: var(--dark-bg-header);
+    background-image: url(images/about/banner.png);
+    background-blend-mode: multiply;
+}
+
+.dark-mode #page-header h2,
+.dark-mode #page-header p {
+    color: var(--hero-text) !important;
+}
+
+.dark-mode #product1 {
+    background-color: var(--bg-dark);
+}
+
+.dark-mode #product1 .pro {
+    background-color: #222 !important;
+    border-color: #444 !important;
+}
+
+.dark-mode #product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(255,255,255,0.05) !important;
+}
+
+.dark-mode #product1 .pro .des span,
+.dark-mode #product1 .pro .des h5,
+.dark-mode #product1 .pro .des h4 {
+    color: var(--hero-text) !important;
+}
+
+.dark-mode #product1 h2 {
+    color: var(--hero-text) !important;
+}
+
+
+
+
