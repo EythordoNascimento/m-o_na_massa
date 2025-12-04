@@ -4,7 +4,7 @@
 
 ## 📌 Sobre o Projeto
 
-A plataforma permite que artesãos cadastrem seus produtos com fotos, descrições e preços. Os clientes podem navegar pelo catálogo, adicionar itens ao carrinho, realizar pagamentos online e avaliar os produtos adquiridos
+A plataforma permite que artesãos cadastrem seus produtos com fotos, descrições e preços. Os clientes podem navegar pelo catálogo, adicionar itens ao carrinho, realizar pagamentos online e avaliar os produtos adquiridos.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -28,5 +28,6 @@ Você pode visualizar e testar a plataforma acessando:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/EythordoNascimento/m-o_na_massa.git
+
 
 
